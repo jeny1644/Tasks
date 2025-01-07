@@ -19,7 +19,7 @@ async function fetchUsers(page = currentPage) {
 
     const paginationDiv = document.getElementById("pagination");
     paginationDiv.innerHTML = `
-  <button id="prevbtn" ${page === 1 ? "disabled" : ""} onclick="fetchUsers(${
+      <button id="prevbtn" ${page === 1 ? "disabled" : ""} onclick="fetchUsers(${
       page - 1
     })">Previous</button>
 `;
@@ -133,14 +133,6 @@ async function btn3(userId, userName) {
       await fetch(`${url}/${userId}`, {
         method: "DELETE",
       });
-
-      const totalItemsResponse = await fetch(url);
-      const totalItems = await totalItemsResponse.json();
-      const totalPages = Math.ceil(totalItems.length / itemsPerPage);
-
-      if (currentPage > totalPages) {
-        currentPage = totalPages;
-      }
 
       fetchUsers(currentPage);
     } catch (error) {
