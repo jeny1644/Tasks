@@ -1,0 +1,93 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* margin: 20px; */
+    background-color: #1E201E
+}
+
+#homebtn{
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #b67c24;
+    color: black;
+}
+
+#addUserForm {
+    background-color: #f9f9f9;
+    color: #333;
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#addUserForm input[type="text"],
+#addUserForm input[type="email"],
+#addUserForm input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+#addUserForm input[type="radio"] {
+    margin-right: 5px;
+}
+
+#addUserForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #cf9236;
+    color: white;
+}
+
+#addUserForm input[type="submit"]:hover {
+    background-color: #df8704;
+}
+
+.user-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 400px;
+    background-color: #f9f9f9;
+    font-weight: 900;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.user-card div {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.user-card input[type="button"] {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.user-card input[type="button"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,146 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e7f1e7;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    text-align: center;
+    background-color: #d4a051;
+}
+
+#bt1 {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #d8993a;
+    color: black;
+}
+
+#bt1:hover {
+    background-color: #ffb039;
+}
+
+#bt2 {
+    background-color: rgb(94, 60, 28);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 8px 18px;
+    border: none;
+}
+
+#bt3 {
+    background-color: rgb(94, 60, 28);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 8px 18px;
+    border: none;
+}
+
+#userlist {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.user-details {
+    color: rgb(0, 0, 0);
+}
+
+.tbl {
+    border: 2px solid black;
+}
+
+thead {
+    background-color: rgb(161, 161, 161);
+}
+
+.body-cnt td {
+    background-color: #d4a051;
+    padding: 10px 20px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+}
+
+#prevbtn,
+#nextbtn {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgb(201, 134, 52);
+    border-radius: 4px;
+}
+
+.pagination-btn {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgb(201, 134, 52);
+    border-radius: 4px;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#pagination button.active {
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.pagination-btn {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination-btn.active-page {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+#prevbtn, #nextbtn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#prevbtn[disabled], #nextbtn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

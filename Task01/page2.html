@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Task01//css/page2.css" />
+    <title>Task01 | Page-2</title>
+  </head>
+  <body>
+    <a href="index.html"> <button id="homebtn">HOME</button></a> <br />
+    <br />
+    <form action="" id="addUserForm">
+      <input type="hidden" id="idnum" required/>
+      <b>Name:</b>
+      <input type="text" id="name" required/>
+      <br />
+      <b>Email:</b>
+      <input type="email" id="email" required/>
+      <br />
+      <b>Mobile No:</b>
+      <input type="text" id="monum" pattern="[7-9]{1}[0-9]{9}" required/>
+      <br />
+      <b>SUB1:</b>
+      <input type="number" id="sub1" min="0" max="100" required/>
+      <b>SUB2:</b>
+      <input type="number" id="sub2" min="0" max="100" required/>
+      <b>SUB3:</b>
+      <input type="number" id="sub3" min="0" max="100" required/>
+      <br />
+      <!-- <b>Status:</b>
+      <input type="radio" id="pass" name="status" />
+      Pass
+      <input type="radio" id="fail" name="status" />
+      Fail -->
+      <input type="submit" id="Submit" onsubmit="onSubmit()" value="SAVE" />
+    </form>
+    <script src="/Task01//js/2.js"></script>
+  </body>
+</html>
