@@ -67,15 +67,5 @@ if (userId) {
       Sub1.value = user.sub1;
       Sub2.value = user.sub2;
       Sub3.value = user.sub3;
-
-      //   // Calculate average and update pass/fail checkbox
-      //   const avg = (Number(user.sub1) + Number(user.sub2) + Number(user.sub3)) / 3;
-      //   if (avg > 33) {
-      //     StatusChkPass.checked = true;
-      //     StatusChkFail.checked = false;
-      //   } else {
-      //     StatusChkPass.checked = false;
-      //     StatusChkFail.checked = true;
-      //   }
     });
 }
