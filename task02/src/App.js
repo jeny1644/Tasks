@@ -11,7 +11,6 @@ import {
   Pagination,
 } from "@mui/material";
 import Button from "@mui/joy/Button";
-// import UserForm from "./Components/userForm";
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -19,17 +18,31 @@ function App() {
   const navigate = useNavigate();
   const url = `http://localhost:3000/users`;
 
+  const calculateAverageAndStatus = (student) => {
+    const { sub1, sub2, sub3 } = student;
+    const avg = (parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3)) / 3;
+    const status = avg >= 33 ? "PASS" : "FAIL";
+
+    return {
+      ...student,
+      avg: avg.toFixed(2), // Format the average to 2 decimal places
+      status: status,
+    };
+  };
+
   const fetchedUsers = async () => {
-    const response = await fetch(`${url}?_limit=5&_start=${page}`);
+    const response = await fetch(`${url}?_limit=5&_start=${(page - 1) * 5}`);
     const data = await response.json();
-    setStudents(data);
+    const updatedData = data.map(calculateAverageAndStatus);
+
+    setStudents(updatedData);
   };
 
   useEffect(() => {
     fetchedUsers();
   }, [page]);
 
-  // delete btn
+  // Delete button handler
   const deleteStudent = async (id) => {
     try {
       const response = await fetch(`${url}/${id}`, {
@@ -93,14 +106,14 @@ function App() {
                   <TableCell>{student.avg}</TableCell>
                   <TableCell
                     className={
-                      student.status === "pass" ? "status-pass" : "status-fail"
+                      student.status === "PASS" ? "status-pass" : "status-fail"
                     }
                   >
                     {student.status}
                   </TableCell>
 
                   <TableCell>
-                    <Button onClick={() => navigate(`/form?id=${student.id}`)}>
+                    <Button>
                       Edit
                     </Button>
                     <Button
