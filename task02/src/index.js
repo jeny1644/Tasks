@@ -17,6 +17,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="userform" element={<UserForm />}>
+      <Route path="/userform/:id" element={<UserForm />} />
       </Route>
     </Routes>
   </BrowserRouter>

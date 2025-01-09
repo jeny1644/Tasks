@@ -16,16 +16,18 @@ function App() {
   const [students, setStudents] = useState([]);
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
-  const url = `http://localhost:3000/users`;
+  const url = `http://localhost:3000/students`;
+  const params = new URLSearchParams(window.location.search);
+  const userId = params.get("id");
 
   const calculateAverageAndStatus = (student) => {
-    const { sub1, sub2, sub3 } = student;
-    const avg = (parseFloat(sub1) + parseFloat(sub2) + parseFloat(sub3)) / 3;
+    const { maths, physics, chemistry } = student;
+    const avg = (parseFloat(maths) + parseFloat(physics) + parseFloat(chemistry)) / 3;
     const status = avg >= 33 ? "PASS" : "FAIL";
 
     return {
       ...student,
-      avg: avg.toFixed(2), // Format the average to 2 decimal places
+      avg: avg.toFixed(2),
       status: status,
     };
   };
@@ -33,6 +35,8 @@ function App() {
   const fetchedUsers = async () => {
     const response = await fetch(`${url}?_limit=5&_start=${(page - 1) * 5}`);
     const data = await response.json();
+    console.log(data);
+    
     const updatedData = data.map(calculateAverageAndStatus);
 
     setStudents(updatedData);
@@ -42,14 +46,14 @@ function App() {
     fetchedUsers();
   }, [page]);
 
-  // Delete button handler
   const deleteStudent = async (id) => {
     try {
       const response = await fetch(`${url}/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
-        fetchedUsers();
+        console.log(`Student with ID ${id} deleted successfully`);  // Log success
+        fetchedUsers();  // Reload the list of students
       } else {
         console.error("Failed to delete user:", response.statusText);
       }
@@ -57,6 +61,7 @@ function App() {
       console.error("Error deleting user:", error);
     }
   };
+  
 
   return (
     <div className="main">
@@ -100,9 +105,9 @@ function App() {
                   <TableCell>{student.name}</TableCell>
                   <TableCell>{student.email}</TableCell>
                   <TableCell>{student.mobile}</TableCell>
-                  <TableCell>{student.sub1}</TableCell>
-                  <TableCell>{student.sub2}</TableCell>
-                  <TableCell>{student.sub3}</TableCell>
+                  <TableCell>{student.maths}</TableCell>
+                  <TableCell>{student.physics}</TableCell>
+                  <TableCell>{student.chemistry}</TableCell>
                   <TableCell>{student.avg}</TableCell>
                   <TableCell
                     className={
@@ -113,7 +118,11 @@ function App() {
                   </TableCell>
 
                   <TableCell>
-                    <Button>
+                    <Button
+                      onClick={() => {
+                        navigate(`/userform/${student.id}`);
+                      }}
+                    >
                       Edit
                     </Button>
                     <Button

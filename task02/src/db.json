@@ -1,117 +1,25 @@
 {
-  "users": [
+  "students": [
     {
-      "id": "bbdc",
-      "name": "jay",
-      "mobile": "85119982086",
-      "sub1": "52",
-      "sub2": "52",
-      "sub3": "52",
-      "email": "abs@gmail.com"
-    },
-    {
-      "id": "f091",
-      "name": "John Smith",
-      "email": "john.smith@example.com",
-      "mobile": "9919243421",
-      "sub1": "52",
-      "sub2": "52",
-      "sub3": "52"
-    },
-    {
-      "id": "fda5",
-      "name": "John Smith",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "80"
-    },
-    {
-      "id": "9bbf",
-      "name": "jenm",
+      "id": "0302",
+      "name": "jeny",
+      "email": "jeny.pansuriya@egreycell.com",
       "mobile": "8511998086",
-      "email": "jeny@gmail.com",
-      "sub1": 80,
-      "sub2": 52,
-      "sub3": 80,
-      "avg": "70.67",
+      "maths": "25",
+      "physics": "85",
+      "chemistry": "85",
+      "avg": "65.00",
       "status": "PASS"
     },
     {
-      "id": "bf8e",
-      "name": "jenm",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "80"
-    },
-    {
-      "id": "ece9",
-      "name": "John Smith",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "52"
-    },
-    {
-      "id": "88e8",
-      "name": "jenm",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "52"
-    },
-    {
-      "id": "f0b4",
-      "name": "jenm",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "80"
-    },
-    {
-      "id": "399a",
-      "name": "John Smith",
-      "email": "john.smith@example.com",
-      "mobile": "85119982086",
-      "sub1": "85",
-      "sub2": "52",
-      "sub3": "52"
-    },
-    {
-      "id": "87d7",
-      "name": "John Smith",
-      "email": "jeny@gmail.com",
-      "mobile": "85119982086",
-      "sub1": "80",
-      "sub2": "80",
-      "sub3": "52"
-    },
-    {
-      "id": "2a86",
-      "name": "jenm",
-      "email": "john.smith@example.com",
-      "mobile": "9919243421",
-      "sub1": "85",
-      "sub2": "80",
-      "sub3": "52",
-      "avg": "72.33",
-      "status": "PASS"
-    },
-    {
-      "id": "59ca",
-      "name": "John Smith",
-      "email": "john.smith@example.com",
-      "mobile": "9919243421",
-      "sub1": "85",
-      "sub2": "80",
-      "sub3": "80",
-      "avg": "81.67",
+      "id": "9ec2",
+      "name": "vj patel",
+      "mobile": "9909243421",
+      "email": "akgajjar@gmail.com",
+      "maths": "5",
+      "physics": "9",
+      "chemistry": "5",
+      "avg": "63.33",
       "status": "PASS"
     }
   ]

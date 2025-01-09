@@ -37,10 +37,3 @@ export const updateStudentFail = (error) => ({
   payload: error,
 });
 
-////////////////////// delete section
-
-export const DELETE_STUDENT = "DELETE_STUDENT";
-
-export const deleteStudent = () => ({
-  type: DELETE_STUDENT,
-});

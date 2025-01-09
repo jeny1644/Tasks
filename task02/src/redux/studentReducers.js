@@ -40,16 +40,14 @@ const studentReducer = (state = initialState, action) => {
         loading: true,
         error: null,
       };
-    case UPDATE_STUDENT_SUCCESS:
-      const updatedStudents = state.students.map((student) =>
-        student.id === action.payload.id ? action.payload : student
-      );
-      return {
-        ...state,
-        loading: false,
-        students: updatedStudents,
-        error: null,
-      };
+      case UPDATE_STUDENT_SUCCESS:
+        return {
+          ...state,
+          students: state.students.map((student) =>
+            student.id === action.payload.id ? action.payload : student
+          ),
+          loading: false,
+        };
     case UPDATE_STUDENT_FAILURE:
       return {
         ...state,
