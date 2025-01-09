@@ -16,45 +16,29 @@ const initialState = {
 const studentReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_STUDENT:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
+    case UPDATE_STUDENT:
+      return { ...state, loading: true };
+    
     case ADD_STUDENT_SUCCESS:
       return {
         ...state,
         loading: false,
         students: [...state.students, action.payload],
       };
+    
+    case UPDATE_STUDENT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        students: state.students.map((student) =>
+          student.id === action.payload.id ? action.payload : student
+        ),
+      };
+    
     case ADD_STUDENT_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload,
-      };
-
-    case UPDATE_STUDENT:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      };
-      case UPDATE_STUDENT_SUCCESS:
-        return {
-          ...state,
-          students: state.students.map((student) =>
-            student.id === action.payload.id ? action.payload : student
-          ),
-          loading: false,
-        };
     case UPDATE_STUDENT_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload,
-      };
-
+      return { ...state, loading: false, error: action.payload };
+    
     default:
       return state;
   }

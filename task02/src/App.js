@@ -35,7 +35,7 @@ function App() {
   const fetchedUsers = async () => {
     const response = await fetch(`${url}?_limit=5&_start=${(page - 1) * 5}`);
     const data = await response.json();
-    console.log(data);
+    
     
     const updatedData = data.map(calculateAverageAndStatus);
 

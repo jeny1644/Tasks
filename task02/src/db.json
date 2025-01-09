@@ -1,25 +1,58 @@
 {
   "students": [
     {
-      "id": "0302",
-      "name": "jeny",
+      "id": "3743",
+      "name": "Akshay Gajjar",
       "email": "jeny.pansuriya@egreycell.com",
       "mobile": "8511998086",
       "maths": "25",
-      "physics": "85",
+      "physics": "92",
+      "chemistry": "90",
+      "avg": "NaN",
+      "status": "FAIL"
+    },
+    {
+      "name": "Akshay Gajjar",
+      "email": "jeny.pansuriya@egreycell.com",
+      "mobile": "8511998086",
+      "maths": "25",
+      "physics": "92",
+      "chemistry": "90",
+      "avg": "NaN",
+      "status": "FAIL",
+      "id": "ca8f"
+    },
+    {
+      "id": "ad43",
+      "name": "jeny",
+      "email": "jeny.pansuriya@egreycell.in",
+      "mobile": "989890890",
+      "maths": "58",
+      "physics": "58",
       "chemistry": "85",
-      "avg": "65.00",
+      "avg": "67.00",
       "status": "PASS"
     },
     {
-      "id": "9ec2",
+      "id": "bdc7",
       "name": "vj patel",
       "mobile": "9909243421",
-      "email": "akgajjar@gmail.com",
-      "maths": "5",
-      "physics": "9",
-      "chemistry": "5",
-      "avg": "63.33",
+      "email": "jeny.pansuriya@egreycell.com",
+      "maths": "25",
+      "physics": "58",
+      "chemistry": "25",
+      "avg": "36.00",
+      "status": "PASS"
+    },
+    {
+      "id": "bfd5",
+      "name": "Akshay Gajjar",
+      "email": "jeny.pansuriya@egreycell.in",
+      "mobile": "25645848",
+      "maths": "25",
+      "physics": "43",
+      "chemistry": "68",
+      "avg": "45.33",
       "status": "PASS"
     }
   ]
