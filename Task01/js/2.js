@@ -1,7 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("id");
 const url = "http://localhost:3000/users";
-
 const idnumber = document.getElementById("idnum");
 const Fname = document.getElementById("name");
 const mobileNum = document.getElementById("monum");

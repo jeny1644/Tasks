@@ -30,8 +30,8 @@
       "maths": "58",
       "physics": "58",
       "chemistry": "85",
-      "avg": "67.00",
-      "status": "PASS"
+      "avg": "NaN",
+      "status": "FAIL"
     },
     {
       "id": "bdc7",
@@ -52,8 +52,8 @@
       "maths": "25",
       "physics": "43",
       "chemistry": "68",
-      "avg": "45.33",
-      "status": "PASS"
+      "avg": "NaN",
+      "status": "FAIL"
     }
   ]
 }

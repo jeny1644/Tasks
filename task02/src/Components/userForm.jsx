@@ -328,27 +328,27 @@
 //     const { maths, physics, chemistry, name, email, mobile } = values;
 //     const { params } = this.props;
 //     const userId = params?.id;
-  
+
 //     console.log("Input values:", { maths, physics, chemistry });
-  
+
 //     const mathsScore = parseFloat(maths);
 //     const physicsScore = parseFloat(physics);
 //     const chemistryScore = parseFloat(chemistry);
 
 //     const avg = (mathsScore + physicsScore + chemistryScore) / 3;
 //     const status = avg >= 33 ? 'PASS' : 'FAIL';
-  
+
 //     const studentData = {
-//       ...values,  
-//       avg: avg.toFixed(2), 
+//       ...values,
+//       avg: avg.toFixed(2),
 //       status,
 //     };
-  
-//     console.log("Submitting student data:", studentData);  
-  
+
+//     console.log("Submitting student data:", studentData);
+
 //     try {
 //       let response;
-      
+
 //       if (userId) {
 //         // If userId exists, we're updating an existing student (PATCH)
 //         response = await fetch(`http://localhost:3000/students/${userId}`, {
@@ -364,14 +364,14 @@
 //           body: JSON.stringify(studentData),
 //         });
 //       }
-  
+
 //       if (!response.ok) {
 //         throw new Error(userId ? 'Failed to update student' : 'Failed to create student');
 //       }
-  
+
 //       const savedStudent = await response.json();
 //       console.log('Saved/Updated Student:', savedStudent);  // Check if all fields are included in the response
-  
+
 //       // Dispatch actions for success
 //       if (userId) {
 //         this.props.updateStudentPass(savedStudent);
@@ -380,14 +380,14 @@
 //         this.props.createStudentPass(savedStudent);
 //         this.props.createStudent(savedStudent);
 //       }
-  
+
 //       this.props.reset();  // Reset the form after successful submission
 //     } catch (error) {
 //       console.error("Error during submission:", error);
 //       this.props.updateStudentFail(error.message);
 //     }
 //   };
-  
+
 //   renderField = ({
 //     input,
 //     label,
@@ -503,6 +503,7 @@
 // );
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
+import { connect } from "react-redux";
 import { Button } from "@mui/material";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import {
@@ -514,7 +515,6 @@ import {
   updateStudentFail,
 } from "../redux/studentActions";
 import "../App.css";
-import { connect } from "react-redux";
 
 class UserForm extends Component {
   constructor(props) {
@@ -555,39 +555,40 @@ class UserForm extends Component {
   }
 
   submitHandler = async (values) => {
+    console.log("Form Values:", values);
     const { maths, physics, chemistry, name, email, mobile } = values;
+    console.log("Maths Score:", maths);
     const { params } = this.props;
     const userId = params?.id;
   
     console.log("Input values:", { maths, physics, chemistry });
-  
     const mathsScore = parseFloat(maths);
     const physicsScore = parseFloat(physics);
     const chemistryScore = parseFloat(chemistry);
-
     const avg = (mathsScore + physicsScore + chemistryScore) / 3;
     const status = avg >= 33 ? 'PASS' : 'FAIL';
   
     const studentData = {
-      ...values,  
-      avg: avg.toFixed(2), 
+      name,      
+      email,
+      mobile,
+      avg: avg.toFixed(2),
       status,
     };
   
-    console.log("Submitting student data:", studentData);  
+    console.log("Submitting student data:", studentData);
   
     try {
       let response;
-      
+  
       if (userId) {
-        // If userId exists, we're updating an existing student (PATCH)
         response = await fetch(`http://localhost:3000/students/${userId}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(studentData),
         });
       } else {
-        // If userId doesn't exist, we're creating a new student (POST)
+        // If userId doesn't exist, create a new student (POST)
         response = await fetch('http://localhost:3000/students', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -600,39 +601,41 @@ class UserForm extends Component {
       }
   
       const savedStudent = await response.json();
-      console.log('Saved/Updated Student:', savedStudent);  // Check if all fields are included in the response
+      console.log('Saved/Updated Student:', savedStudent);
   
       if (userId) {
+        // Dispatch success action for update
         this.props.updateStudentPass(savedStudent);
         this.props.updateStudent(savedStudent);
       } else {
+        // Dispatch success action for create
         this.props.createStudentPass(savedStudent);
         this.props.createStudent(savedStudent);
       }
   
-      this.props.reset();  
+      // Reset the form after submission
+      this.props.reset();
     } catch (error) {
       console.error("Error during submission:", error);
+      // Dispatch failure action
       this.props.updateStudentFail(error.message);
     }
   };
   
-  renderField = ({
-    input,
-    label,
-    meta: { touched, error },
-    inputClassName = "",
-  }) => (
-    <div className="inputField">
-      <label className="label-field">{label}</label>
-      {touched && error && <span className="error">{error}</span>}
-      <input
-        {...input}
-        className={`input-field ${inputClassName}`}
-        placeholder={label}
-      />
-    </div>
-  );
+  
+
+  renderField = ({ input, label, meta: { touched, error } }) => {
+    // console.log("Field input props:", input); // Log the input props
+  
+    return (
+      <div className="inputField">
+        <label>{label}</label>
+        <input {...input} placeholder={label} />
+        {touched && error && <span>{error}</span>}
+      </div>
+    );
+  };
+  
 
   render() {
     const { handleSubmit, initialValues } = this.props;
@@ -645,8 +648,8 @@ class UserForm extends Component {
         </Button>
         <div className="body-main">
           <div className="body-content">
-            {/* Added handleSubmit to form */}
-            <form onSubmit={handleSubmit(this.submitHandler)} className="form">
+          <form onSubmit={handleSubmit((values) => console.log("Form Values:", values))} className="form">
+
               <Field name="name" component={this.renderField} label="Name" />
               <Field name="email" component={this.renderField} label="Email" />
               <Field name="mobile" component={this.renderField} label="Phone" />
@@ -661,7 +664,6 @@ class UserForm extends Component {
                 component={this.renderField}
                 label="Chemistry"
               />
-              {/* Removed onClick and directly using handleSubmit on form */}
               <button type="submit" className="submitbtn">
                 {this.props.params.id ? "Update" : "Create"}
               </button>
@@ -726,7 +728,17 @@ export default connect(
   mapDispatchToProps
 )(
   reduxForm({
-    form: "userForm",
+    form: "studentform",
+    initialValues: {
+      name: "John Doe",
+      email: "john@example.com",
+      mobile: "1234567890",
+      maths: "90",
+      physics: "85",
+      chemistry: "95",
+    },
     enableReinitialize: true,
   })(withRouter(UserForm))
 );
+
+

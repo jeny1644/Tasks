@@ -4,7 +4,7 @@ import studentReducer from "./studentReducers";
 
 const rootReducer = combineReducers({
     form: formReducer,
-    students: studentReducer
+    students: studentReducer,
 });
 
 const store = createStore(rootReducer);
