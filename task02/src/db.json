@@ -1,42 +1,9 @@
 {
   "students": [
     {
-      "id": "3743",
-      "name": "Akshay Gajjar",
-      "email": "jeny.pansuriya@egreycell.com",
-      "mobile": "8511998086",
-      "maths": "25",
-      "physics": "92",
-      "chemistry": "90",
-      "avg": "NaN",
-      "status": "FAIL"
-    },
-    {
-      "name": "Akshay Gajjar",
-      "email": "jeny.pansuriya@egreycell.com",
-      "mobile": "8511998086",
-      "maths": "25",
-      "physics": "92",
-      "chemistry": "90",
-      "avg": "NaN",
-      "status": "FAIL",
-      "id": "ca8f"
-    },
-    {
-      "id": "ad43",
-      "name": "jeny",
-      "email": "jeny.pansuriya@egreycell.in",
-      "mobile": "989890890",
-      "maths": "58",
-      "physics": "58",
-      "chemistry": "85",
-      "avg": "NaN",
-      "status": "FAIL"
-    },
-    {
       "id": "bdc7",
-      "name": "vj patel",
-      "mobile": "9909243421",
+      "name": "vj pansuriya",
+      "phoneNo": "9909243421",
       "email": "jeny.pansuriya@egreycell.com",
       "maths": "25",
       "physics": "58",
@@ -48,12 +15,111 @@
       "id": "bfd5",
       "name": "Akshay Gajjar",
       "email": "jeny.pansuriya@egreycell.in",
-      "mobile": "25645848",
+      "phoneNo": "25645848",
       "maths": "25",
       "physics": "43",
       "chemistry": "68",
       "avg": "NaN",
       "status": "FAIL"
+    },
+    {
+      "id": "5730",
+      "name": "Akshay",
+      "email": "ak@gmail.com",
+      "phoneNo": "9909243421",
+      "maths": "55",
+      "physics": "55",
+      "chemistry": "55"
+    },
+    {
+      "id": "5730",
+      "name": "Akshay",
+      "email": "ak@gmail.com",
+      "phoneNo": "9909243421",
+      "maths": "55",
+      "physics": "55",
+      "chemistry": "55"
+    },
+    {
+      "id": "5731",
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "phoneNo": "9812345678",
+      "maths": "68",
+      "physics": "72",
+      "chemistry": "60"
+    },
+    {
+      "id": "5732",
+      "name": "Neha",
+      "email": "neha@gmail.com",
+      "phoneNo": "9876543210",
+      "maths": "75",
+      "physics": "80",
+      "chemistry": "70"
+    },
+    {
+      "id": "5733",
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "phoneNo": "9123456789",
+      "maths": "88",
+      "physics": "85",
+      "chemistry": "90"
+    },
+    {
+      "id": "5734",
+      "name": "Vikas",
+      "email": "vikas@gmail.com",
+      "phoneNo": "9234567890",
+      "maths": "45",
+      "physics": "50",
+      "chemistry": "55"
+    },
+    {
+      "id": "5735",
+      "name": "Sneha",
+      "email": "sneha@gmail.com",
+      "phoneNo": "9345678901",
+      "maths": "12",
+      "physics": "12",
+      "chemistry": "12"
+    },
+    {
+      "id": "5736",
+      "name": "Aman",
+      "email": "aman@gmail.com",
+      "phoneNo": "9456789012",
+      "maths": "60",
+      "physics": "65",
+      "chemistry": "70"
+    },
+    {
+      "id": "5737",
+      "name": "Meera",
+      "email": "meera@gmail.com",
+      "phoneNo": "9567890123",
+      "maths": "85",
+      "physics": "78",
+      "chemistry": "88"
+    },
+    {
+      "id": "5738",
+      "name": "Karan",
+      "email": "karan@gmail.com",
+      "phoneNo": "9678901234",
+      "maths": "49",
+      "physics": "52",
+      "chemistry": "58"
+    },
+    {
+      "id": "5739",
+      "name": "Anjali",
+      "email": "anjali@gmail.com",
+      "phoneNo": "9789012345",
+      "maths": "78",
+      "physics": "80",
+      "chemistry": "85"
     }
   ]
 }

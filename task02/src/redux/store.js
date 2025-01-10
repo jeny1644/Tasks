@@ -1,11 +1,12 @@
-import { combineReducers, createStore } from "redux";
-import { reducer as formReducer } from "redux-form";
-import studentReducer from "./studentReducers";
+import { configureStore } from '@reduxjs/toolkit'
+import userReducer from './userSlice'
+import { reducer as formReducer } from 'redux-form';
 
-const rootReducer = combineReducers({
-    form: formReducer,
-    students: studentReducer,
-});
+const store = configureStore({
+    reducer: {
+        users: userReducer,
+        form: formReducer,
+    },
+})
 
-const store = createStore(rootReducer);
 export default store;
