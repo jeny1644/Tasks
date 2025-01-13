@@ -169,7 +169,7 @@ const ListPage = () => {
                 </TableCell>
                 <TableCell align="center">
                   <Button
-                    variant="outlined"
+                    variant="contained"
                     color="primary"
                     size="small"
                     sx={{ marginRight: 1 }}
@@ -178,7 +178,7 @@ const ListPage = () => {
                     Edit
                   </Button>
                   <Button
-                    variant="outlined"
+                    variant="contained"
                     color="error"
                     size="small"
                     onClick={() => deleteData(url, item.id)}

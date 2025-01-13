@@ -2,11 +2,11 @@
   "students": [
     {
       "id": "bdc7",
-      "name": "vj pansuriya",
+      "name": "Jeny Pansuriya",
       "phoneNo": "9909243421",
       "email": "jeny.pansuriya@egreycell.com",
       "maths": "25",
-      "physics": "58",
+      "physics": "25",
       "chemistry": "25",
       "avg": "36.00",
       "status": "PASS"
@@ -14,22 +14,13 @@
     {
       "id": "bfd5",
       "name": "Akshay Gajjar",
-      "email": "jeny.pansuriya@egreycell.in",
-      "phoneNo": "25645848",
+      "email": "akshaygajjar@gmail.com",
+      "phoneNo": "6355600027",
       "maths": "25",
       "physics": "43",
       "chemistry": "68",
       "avg": "NaN",
       "status": "FAIL"
-    },
-    {
-      "id": "5730",
-      "name": "Akshay",
-      "email": "ak@gmail.com",
-      "phoneNo": "9909243421",
-      "maths": "55",
-      "physics": "55",
-      "chemistry": "55"
     },
     {
       "id": "5730",

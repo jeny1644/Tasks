@@ -111,7 +111,9 @@ class FormPage extends Component {
     const { handleSubmit } = this.props;
     return (
       <>
-        <Button variant="contained" onClick={this.navigateHome}>
+        <Button variant="contained" 
+        sx={{ margin: "10px"}}
+        onClick={this.navigateHome}>
           HOME
         </Button>
         <Box
